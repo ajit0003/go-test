@@ -8,6 +8,7 @@ WORKDIR $GOPATH/src/test
 COPY . .
 
 #Download dependencies
+RUN go get -u github.com/jstemmer/go-junit-report
 RUN go get -d -v ./...
 
 # Build the Go app
